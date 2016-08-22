@@ -7,14 +7,25 @@
 
         <nav class="nav">
             <ul class="nav-list">
-                {{ with .Site.Params.twitterName }}
+                {{ with .Site.Params.twitterUrl }}
                 <li class="nav-item">
-                    <a class="pure-button" href="https://twitter.com/{{ . }}"><i class="fa fa-twitter"></i> Twitter</a>
+                    <a class="pure-button" href="{{ . }}">
+                        <i class="fa fa-twitter" style="font-size:28px;"></i>
+                    </a>
                 </li>
                 {{ end }}
-                {{ with .Site.Params.githubName }}
+                {{ with .Site.Params.linkedinUrl }}
                 <li class="nav-item">
-                    <a class="pure-button" href="https://github.com/{{ . }} "><i class="fa fa-github-alt"></i> github</a>
+                    <a class="pure-button" href="{{ . }} ">
+                        <i class="fa fa-linkedin-square" style="font-size:28px;"></i>
+                    </a>
+                </li>
+                {{ end }}
+                {{ with .Site.Params.githubUrl }}
+                <li class="nav-item">
+                    <a class="pure-button" href="{{ . }} ">
+                        <i class="fa fa-github" style="font-size:28px;"></i>
+                    </a>
                 </li>
                 {{ end }}
             </ul>
